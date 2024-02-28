@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_practice/bottomnavigationbar.dart';
-import 'package:ui_practice/home.dart';
+import 'package:ui_practice/screens/home.dart';
+import 'package:ui_practice/screens/lastScreen.dart';
 import 'package:ui_practice/utils/card1.dart';
 import 'package:ui_practice/utils/secondpagecard2.dart';
 
@@ -45,12 +46,7 @@ class SecondScreen extends StatelessWidget {
                                 child: IconButton(
                                   padding: const EdgeInsets.all(24),
                                   onPressed: () {
-                                    Navigator.of(context).pushAndRemoveUntil(
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const MyHomePage(),
-                                        ),
-                                        (route) => false);
+                                    Navigator.of(context).pop();
                                   },
                                   icon: const Icon(
                                     Icons.auto_awesome_mosaic,
@@ -105,22 +101,30 @@ class SecondScreen extends StatelessWidget {
                                 ),
                                 const PageSecondCard(),
                                 const SizedBox(
-                                  height: 6,
+                                  height: 8,
                                 ),
-                                const Row(
+                                Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     SecondPageBottomCard(
-                                      color: Color(0XFFAD8D64),
+                                      onPressed: () {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LastScreen(),
+                                          ),
+                                        );
+                                      },
+                                      color: const Color(0XFFAD8D64),
                                       title: 'Send\nKey',
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.key_rounded,
                                         color: Colors.black,
                                       ),
                                     ),
-                                    SecondPageBottomCard(
+                                    const SecondPageBottomCard(
                                       color: Color(0XFF373737),
                                       title: 'Send\nCode',
                                       icon: Icon(

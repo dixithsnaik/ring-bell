@@ -5,8 +5,11 @@ class SecondPageBottomCard extends StatelessWidget {
   final Icon icon;
   final String title;
   final Color color;
+  final VoidCallback? onPressed;
+
   const SecondPageBottomCard({
     super.key,
+    this.onPressed,
     required this.icon,
     required this.title,
     required this.color,
@@ -26,6 +29,7 @@ class SecondPageBottomCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Button(
+            onPressed: onPressed,
             size: 70,
             icon: icon,
             color: const Color.fromARGB(100, 255, 255, 255),

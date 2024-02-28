@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:slide_to_confirm/slide_to_confirm.dart';
-import 'package:ui_practice/secondScreen.dart';
+import 'package:ui_practice/screens/secondScreen.dart';
 import 'package:ui_practice/utils/page_indicator.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,7 +141,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       ConfirmationSlider(
                         height: 80,
-                        stickToEnd: true,
+                        stickToEnd: false,
                         backgroundColor:
                             const Color.fromARGB(30, 255, 255, 255),
                         foregroundColor: Colors.white,
@@ -150,11 +150,12 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.black,
                         ),
                         onConfirmation: () {
-                          Navigator.of(context).pushAndRemoveUntil(
-                              MaterialPageRoute(
-                                builder: (context) => const SecondScreen(),
-                              ),
-                              (route) => false);
+                          
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const SecondScreen(),
+                            ),
+                          );
                         },
                         text: 'Start      > > >',
                         textStyle: const TextStyle(

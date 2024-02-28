@@ -5,8 +5,10 @@ class Button extends StatelessWidget {
   final Color color;
   final Color bordercolor;
   final double size;
+  final VoidCallback? onPressed;
   const Button({
     super.key,
+    this.onPressed,
     required this.icon,
     this.color = const Color.fromARGB(30, 255, 255, 255),
     this.bordercolor = Colors.white,
@@ -24,7 +26,7 @@ class Button extends StatelessWidget {
         color: color,
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: icon,
       ),
     );
