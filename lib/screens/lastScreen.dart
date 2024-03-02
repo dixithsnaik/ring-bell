@@ -110,6 +110,7 @@ class LastScreen extends StatelessWidget {
                   color: const Color(0XFF848484),
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(
@@ -136,186 +137,189 @@ class LastScreen extends StatelessWidget {
                     const SizedBox(
                       height: 50,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundColor: Colors.white,
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 40,
-                                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          const Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundColor: Colors.white,
+                                child: Center(
+                                  child: Icon(
+                                    Icons.add,
+                                    size: 40,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 10,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                  '',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[0]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[0]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[0]['url']),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[1]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[1]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                                const SizedBox(
-                                  height: 10,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[2]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[2]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                  info[0]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[3]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[3]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[1]['url']),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[4]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[4]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                                const SizedBox(
-                                  height: 10,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(info[5]['url']),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                info[5]['name'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                  info[1]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[2]['url']),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  info[2]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[3]['url']),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  info[3]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[4]['url']),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  info[4]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  radius: 40,
-                                  backgroundImage: NetworkImage(info[5]['url']),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  info[5]['name'],
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(
